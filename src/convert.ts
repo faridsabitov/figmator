@@ -194,12 +194,12 @@ export const convert = async (convertOptions: ConvertOptions) => {
     );
 
     const symbolsNode = tree.document.children.find(
-      item => item.name === "Symbols"
+      item => item.name === "Overview"
     );
 
     print`File ${
       convertOptions.fileId
-    } found, generating component tree in ${`/${convertOptions.outputDir}/`}`;
+      } found, generating component tree in ${`/${convertOptions.outputDir}/`}`;
 
     if (!symbolsNode) {
       throw new Error('Cant find "Symbols" page in the file!');
